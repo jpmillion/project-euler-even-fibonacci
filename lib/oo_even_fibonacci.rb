@@ -6,13 +6,15 @@ class EvenFibonacci
     end
 
     def sum
-        case num
-        when 10
-            10
-        when 100
-            44
-        else
-            4613732
+        x = 0
+        y = 1
+        sum = 0
+        while y <= num
+            z = x + y
+            x = y
+            y = z
+            sum += y if y % 2 == 0
         end
+        sum
     end
 end
